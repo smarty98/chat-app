@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.app {
+  display: flex;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.sidebar {
+  flex: 0 0 400px;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.sidebar .search-history {
+  margin-bottom: 20px;
+}
+
+.sidebar .search-item {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.sidebar .search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar .search-section input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+.lesson-content {
+  max-width: 800px; 
+  width: 100%; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.typewriter {
+  display: inline-block;
+  border-right: 2px solid black;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+#btn{ color: white;
+   background-color: rgb(55, 116, 197); 
+   cursor: pointer; padding: 10px; 
+   border: none; 
+   border-radius: 10px; } 
+
+#ipt{ 
+  padding:4px; 
+height: 36px;
+border-radius: 10px;
+border: 1px solid blue;
 }
